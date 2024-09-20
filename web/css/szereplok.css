@@ -1,0 +1,45 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+html, body{
+    width: 100%;
+}
+
+:root{
+    --nav-black: rgb(0, 0, 0);
+    --nav-brown: rgb(85, 50, 10);
+}
+
+#background {
+    background-image: url(../src/img/background_szereplok2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cim {
+    font-size: 10cqmin;
+    padding: 2cqmin;
+    font-family: 'Bungee Spice';
+    background-color: var(--nav-brown);
+}
+
+body {
+    --google-font-color-bungeespice: colrv1;
+}
+
+nav{
+    height: 10cqmin;
+    width: 100%;
+    background-color: var(--nav-black);
+}
+
+.szereplo-kartya{
+    color: white;
+}
