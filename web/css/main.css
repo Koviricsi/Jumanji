@@ -38,11 +38,11 @@ html,body{
         flex-direction: column;
 
         h2{
-            font-size:var(--kh2);
+            font-size: max(1.5rem, 5cqmin);
             height: 1cqb;
         }
         img{
-            height: 80%;
+            height: max(110px, 28cqmin);
         }
     }
 }
@@ -54,11 +54,3 @@ nav{
     width: 100%;
     background-color: var(--nav-brown);
 }
-
-
-@media screen and (height < 500px) {
-    :root{
-        --kh2: ;
-    }
-}
-
