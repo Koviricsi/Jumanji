@@ -9,8 +9,9 @@ html, body{
 }
 
 :root{
-    --nav-black: rgb(0, 0, 0);
+    --black: rgb(0, 0, 0);
     --nav-brown: rgb(85, 50, 10);
+    --white: rgb(255, 255, 255);
 }
 
 #background {
@@ -38,8 +39,9 @@ nav{
     height: 10cqmin;
     width: 100%;
     background-color: var(--nav-black);
+    color: var(--white);
 }
 
 .szereplo-kartya{
-    color: white;
+    color: var(--white);
 }
