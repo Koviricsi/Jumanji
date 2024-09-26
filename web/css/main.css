@@ -42,7 +42,7 @@ html,body{
 
 #kezdokep{
     width: 100%;
-    height: 90dvh;
+    height: 85dvh;
     min-height: 500px;
     background-image: url(../src/img/jumanji-kezdokep.jpg);
     background-repeat: no-repeat;
@@ -55,8 +55,8 @@ html,body{
 
     section{
         width: 100%;
-        height: 30dvh;
-        min-height: 150px;
+        height: 32cqmin;
+        min-height: 12.8rem;
         background-color: rgba(0,0,0, 0.7);
         display: flex;
         justify-content: center;
@@ -64,17 +64,17 @@ html,body{
         flex-direction: column;
 
         h2{
-            font-size: max(1.5rem, 5cqmin);
+            font-size: max(2rem, 5cqmin);
             height: 1cqb;
         }
         img{
-            height: max(110px, 28cqmin);
+            height: max(11.2rem, 28cqmin);
         }
     }
 }
 
 nav{
-    height: 12cqmin;
+    height: 15dvh;
     min-height: 100px;
     width: 100%;
     background-image: url(../src/img/log_bark\ \(2\).jpg);
@@ -86,7 +86,7 @@ nav{
     div{
         padding: 2cqmin;
         border-radius: 10%;
-        border-inline: solid 0.8cqmin rgba(255,255,255,0);
+        border-inline: solid max(0.32rem, 0.8cqmin) rgba(255,255,255,0);
         transition: all 0.2s;
 
         &:is(:hover,:focus,:target, :active){
@@ -99,14 +99,13 @@ nav{
             animation-delay: 0.3s;
         }
         a{
-            /*text-shadow: 0.4cqmin 0.4cqmin rgb(240, 105, 15), 0.8cqmin 0.6cqmin rgb(240, 15, 15);*/
-            font-size: max(1.5rem, 4cqmin);
+            font-size: max(2rem, min(4.5cqmin, 3cqmax));
             font-family: "Bungee Spice", sans-serif;
             text-shadow:
-            -0.3cqmin 0.3cqmin rgb(255, 255, 255),
-            0.3cqmin 0.3cqmin rgb(255, 255, 255),
-            0.3cqmin -0.3cqmin rgb(255, 255, 255),
-            -0.3cqmin -0.3cqmin rgb(255, 255, 255);
+            max(0.12rem, -0.3cqmin) max(0.12rem, 0.3cqmin) rgb(255, 255, 255),
+            max(0.12rem, 0.3cqmin) max(0.12rem, 0.3cqmin) rgb(255, 255, 255),
+            max(0.12rem, 0.3cqmin) max(0.12rem, -0.3cqmin) rgb(255, 255, 255),
+            max(0.12rem, -0.3cqmin) max(0.12rem, -0.3cqmin) rgb(255, 255, 255);
             text-decoration: none;
             cursor: pointer;
         }
