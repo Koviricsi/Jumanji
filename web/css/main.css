@@ -16,10 +16,10 @@ html,body{
     position: absolute;
     top: 0;
     right: 0;
-    margin: max(20px, 2cqmin);
-    padding: max(5px, 1cqmin) max(10px, 2cqmin);
-    background-color: rgba(0,0,0, 0.6);
-    border: solid max(2px, 0.8cqmin) rgb(0,0,0);
+    margin: max(0.8rem, 2cqmin);
+    padding: max(0.4rem, 1cqmin) max(0.8rem, 2cqmin);
+    background-color: rgba(30, 10, 0, 0.6);
+    border: solid max(0.32rem, 0.8cqmin) rgb(20,5,0);
     border-radius: 50px;
     transition: all 0.2s;
     cursor: pointer;
@@ -31,11 +31,11 @@ html,body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 
     &:hover{
-        background-color: rgba(0,0,0, 1);
+        background-color: rgba(30, 10, 0, 1);
     }
     span{
         margin-left: 0.6cqw;
-        font-size: max(0.8rem, 2.5cqmin);
+        font-size: max(1rem, 2.5cqmin);
     }
 }
 
