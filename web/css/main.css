@@ -12,7 +12,7 @@ html,body{
     min-height: 200dvh;
 }
 
-#elozetes{
+.vid{
     position: absolute;
     top: 0;
     right: 0;
@@ -38,6 +38,7 @@ html,body{
         font-size: max(0.8rem, 2.5cqmin);
     }
 }
+
 
 #kezdokep{
     width: 100%;
