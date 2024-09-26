@@ -20,14 +20,14 @@ html,body{
     padding: max(0.4rem, 1cqmin) max(0.8rem, 2cqmin);
     background-color: rgba(30, 10, 0, 0.6);
     border: solid max(0.32rem, 0.8cqmin) rgb(20,5,0);
-    border-radius: 50px;
+    border-radius: 5cqmin;
     transition: all 0.2s;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     color: rgb(255, 255, 255);
-    font-size: max(0.8rem, 2.5cqmin);
+    font-size: max(0.8rem, calc(min(1.8cqmin, 0.5cqmax) + 1rem));
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 
     &:hover{
@@ -35,7 +35,6 @@ html,body{
     }
     span{
         margin-left: 0.6cqw;
-        font-size: max(1rem, 2.5cqmin);
     }
 }
 
@@ -64,7 +63,7 @@ html,body{
         flex-direction: column;
 
         h2{
-            font-size: max(2rem, 5cqmin);
+            font-size: max(2rem, calc(min(4cqmin, 2cqmax) + 1rem));
             height: 1cqb;
         }
         img{
@@ -89,7 +88,7 @@ nav{
         border-inline: solid max(0.32rem, 0.8cqmin) rgba(255,255,255,0);
         transition: all 0.2s;
 
-        &:is(:hover,:focus,:target, :active){
+        &:is(:hover,:focus,:target,:active){
             border-inline: solid 0.8cqmin rgba(255,255,255,0.5);
             animation-name: nav-border;
             animation-duration: 0.5s;
@@ -99,7 +98,7 @@ nav{
             animation-delay: 0.3s;
         }
         a{
-            font-size: max(2rem, min(4.5cqmin, 3cqmax));
+            font-size: max(2rem, calc(min(4cqmin, 1.3cqmax) + 1rem));
             font-family: "Bungee Spice", sans-serif;
             text-shadow:
             max(0.12rem, -0.3cqmin) max(0.12rem, 0.3cqmin) rgb(255, 255, 255),
