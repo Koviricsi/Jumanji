@@ -1,47 +1,107 @@
 * {
     padding: 0;
     margin: 0;
-    border: 0;
+    /*box-sizing: border-box;*/
 }
 
-html, body{
+html,
+body {
     width: 100%;
 }
 
-:root{
+:root {
     --black: rgb(0, 0, 0);
-    --nav-brown: rgb(85, 50, 10);
+    --back-black: rgba(0, 0, 0, 0.7);
     --white: rgb(255, 255, 255);
 }
 
-#background {
-    background-image: url(../src/img/background_szereplok2.jpg);
+#kezdokep {
+    background-image: url(../src/img/background_szereplok.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
-    height: 100dvh;
+    background-position: center;
+    height: 84dvh;
+    display: flex;
+    align-items: center;
+
+    h1 {
+        background-color: var(--back-black);
+
+        font-family: "Bungee Spice", sans-serif;
+        font-size: 20cqmin;
+        padding: 2cqmin;
+        width: 100%;
+        text-align: center;
+
+
+
+    }
+}
+
+nav {
+    height: 16dvh;
+    font-size: 10cqmin;
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
-#cim {
-    font-size: 10cqmin;
-    padding: 2cqmin;
-    font-family: 'Bungee Spice';
-    background-color: var(--nav-brown);
-}
 
-body {
-    --google-font-color-bungeespice: colrv1;
-}
+
+
+
+
+
+
+
 
 nav{
-    height: 10cqmin;
+    height: 15dvh;
+    min-height: 100px;
     width: 100%;
-    background-color: var(--nav-black);
-    color: var(--white);
+    background-image: url(../src/img/log_bark\ \(2\).jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    div{
+        padding: 2cqmin;
+        border-radius: 10%;
+        border-inline: solid max(0.32rem, 0.8cqmin) rgba(255,255,255,0);
+        transition: all 0.2s;
+
+        &:is(:hover,:focus,:target, :active){
+            border-inline: solid 0.8cqmin rgba(255,255,255,0.5);
+            animation-name: nav-border;
+            animation-duration: 0.5s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-delay: 0.3s;
+        }
+        a{
+            font-size: max(2rem, min(4.5cqmin, 3cqmax));
+            font-family: "Bungee Spice", sans-serif;
+            text-shadow:
+            max(0.12rem, -0.3cqmin) max(0.12rem, 0.3cqmin) rgb(255, 255, 255),
+            max(0.12rem, 0.3cqmin) max(0.12rem, 0.3cqmin) rgb(255, 255, 255),
+            max(0.12rem, 0.3cqmin) max(0.12rem, -0.3cqmin) rgb(255, 255, 255),
+            max(0.12rem, -0.3cqmin) max(0.12rem, -0.3cqmin) rgb(255, 255, 255);
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
 }
 
-.szereplo-kartya{
-    color: var(--white);
+
+
+
+
+
+
+@media screen and (width <=768px) {
+    body {
+        display: none;
+    }
 }
