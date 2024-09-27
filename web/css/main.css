@@ -12,36 +12,36 @@ html,body{
     min-height: 200dvh;
 }
 
-#elozetes{
+.vid{
     position: absolute;
     top: 0;
     right: 0;
-    margin: max(20px, 2cqmin);
-    padding: max(5px, 1cqmin) max(10px, 2cqmin);
-    background-color: rgba(0,0,0, 0.6);
-    border: solid max(2px, 0.8cqmin) rgb(0,0,0);
-    border-radius: 50px;
+    margin: max(0.8rem, 2cqmin);
+    padding: max(0.4rem, 1cqmin) max(0.8rem, 2cqmin);
+    background-color: rgba(30, 10, 0, 0.6);
+    border: solid max(0.32rem, 0.8cqmin) rgb(20,5,0);
+    border-radius: 5cqmin;
     transition: all 0.2s;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     color: rgb(255, 255, 255);
-    font-size: max(0.8rem, 2.5cqmin);
+    font-size: max(0.8rem, calc(min(1.8cqmin, 0.5cqmax) + 1rem));
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 
     &:hover{
-        background-color: rgba(0,0,0, 1);
+        background-color: rgba(30, 10, 0, 1);
     }
     span{
         margin-left: 0.6cqw;
-        font-size: max(0.8rem, 2.5cqmin);
     }
 }
 
+
 #kezdokep{
     width: 100%;
-    height: 90dvh;
+    height: 85dvh;
     min-height: 500px;
     background-image: url(../src/img/jumanji-kezdokep.jpg);
     background-repeat: no-repeat;
@@ -54,8 +54,8 @@ html,body{
 
     section{
         width: 100%;
-        height: 30dvh;
-        min-height: 150px;
+        height: 32cqmin;
+        min-height: 12.8rem;
         background-color: rgba(0,0,0, 0.7);
         display: flex;
         justify-content: center;
@@ -63,17 +63,17 @@ html,body{
         flex-direction: column;
 
         h2{
-            font-size: max(1.5rem, 5cqmin);
+            font-size: max(2rem, calc(min(4cqmin, 2cqmax) + 1rem));
             height: 1cqb;
         }
         img{
-            height: max(110px, 28cqmin);
+            height: max(11.2rem, 28cqmin);
         }
     }
 }
 
 nav{
-    height: 12cqmin;
+    height: 15dvh;
     min-height: 100px;
     width: 100%;
     background-image: url(../src/img/log_bark\ \(2\).jpg);
@@ -85,10 +85,10 @@ nav{
     div{
         padding: 2cqmin;
         border-radius: 10%;
-        border-inline: solid 0.8cqmin rgba(255,255,255,0);
+        border-inline: solid max(0.32rem, 0.8cqmin) rgba(255,255,255,0);
         transition: all 0.2s;
 
-        &:is(:hover,:focus,:target, :active){
+        &:is(:hover,:focus,:target,:active){
             border-inline: solid 0.8cqmin rgba(255,255,255,0.5);
             animation-name: nav-border;
             animation-duration: 0.5s;
@@ -98,14 +98,13 @@ nav{
             animation-delay: 0.3s;
         }
         a{
-            /*text-shadow: 0.4cqmin 0.4cqmin rgb(240, 105, 15), 0.8cqmin 0.6cqmin rgb(240, 15, 15);*/
-            font-size: max(1.5rem, 4cqmin);
+            font-size: max(2rem, calc(min(4cqmin, 1.3cqmax) + 1rem));
             font-family: "Bungee Spice", sans-serif;
             text-shadow:
-            -0.3cqmin 0.3cqmin rgb(255, 255, 255),
-            0.3cqmin 0.3cqmin rgb(255, 255, 255),
-            0.3cqmin -0.3cqmin rgb(255, 255, 255),
-            -0.3cqmin -0.3cqmin rgb(255, 255, 255);
+            max(0.12rem, -0.3cqmin) max(0.12rem, 0.3cqmin) rgb(255, 255, 255),
+            max(0.12rem, 0.3cqmin) max(0.12rem, 0.3cqmin) rgb(255, 255, 255),
+            max(0.12rem, 0.3cqmin) max(0.12rem, -0.3cqmin) rgb(255, 255, 255),
+            max(0.12rem, -0.3cqmin) max(0.12rem, -0.3cqmin) rgb(255, 255, 255);
             text-decoration: none;
             cursor: pointer;
         }
