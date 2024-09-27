@@ -14,13 +14,14 @@
     <title>Jumanji: Filmajánló</title>
 </head>
 <body>
-    <span id="elozetes" onclick="videoButtonChange();" class="vid back-hide">
+    <span id="elozetes" onclick="if (!isAnimating){videoButtonChange(); videoContent(); isAnimating = true};" class="vid back-hide">
         Előzetes
         <span class="material-symbols-outlined">movie</span>
     </span>
 
     <div id="kezdokep">
-        <section>
+        <video id="vplayer" src="../src/video/jumanji1.mp4" controls preload="auto" muted style="opacity: 0;"></video>
+        <section id="focim" style="opacity: 1;">
             <h2>Filmajánló</h2>
             <img src="../src/img/jumanji_logo.png">
         </section>
@@ -37,13 +38,5 @@
             <a href="../html/eredmeny.html">Eredmények</a>
         </div>
     </nav>
-
-    <template id="temp">
-        <video controls muted style="width: 100%; height: 100%;">
-            <source src="../src/video/jumanji1.mp4" type="video/mp4">
-            <source src="../src/video/jumanji1.mp4" type="video/mp4">
-            Ez a böngésző nem támogatja a HTML5 szabványú videókat.
-        </video>
-    </template>
 </body>
 </html>

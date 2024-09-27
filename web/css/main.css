@@ -29,6 +29,7 @@ html,body{
     color: rgb(255, 255, 255);
     font-size: max(0.8rem, calc(min(1.8cqmin, 0.5cqmax) + 1rem));
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    z-index: 100;
 
     &:hover{
         background-color: rgba(30, 10, 0, 1);
@@ -51,6 +52,8 @@ html,body{
     justify-content: center;
     align-items: center;
     font-family: "Bungee Spice", sans-serif;
+    transition: 0.5s all;
+    position: relative;
 
     section{
         width: 100%;
@@ -69,6 +72,12 @@ html,body{
         img{
             height: max(11.2rem, 28cqmin);
         }
+    }
+    video{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 }
 
