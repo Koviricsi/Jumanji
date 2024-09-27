@@ -4,9 +4,6 @@
     box-sizing: border-box;
 }
 
-:root{
-}
-
 html,body{
     width: 100%;
     min-height: 200dvh;
