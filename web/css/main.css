@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 html,body{
@@ -17,7 +18,7 @@ html,body{
     padding: max(0.4rem, 1cqmin) max(0.8rem, 2cqmin);
     background-color: rgba(30, 10, 0, 0.6);
     border: solid max(0.32rem, 0.8cqmin) rgb(20,5,0);
-    border-radius: 5cqmin;
+    border-radius: 3cqmin;
     transition: all 0.2s;
     cursor: pointer;
     display: flex;
@@ -51,6 +52,7 @@ html,body{
     font-family: "Bungee Spice", sans-serif;
     transition: 0.5s all;
     position: relative;
+    box-shadow: 0cqmin -1cqmin 1cqmin inset;
 
     section{
         width: 100%;
@@ -87,6 +89,7 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 100;
     
     div{
         padding: 2cqmin;
@@ -117,6 +120,96 @@ nav{
     }
 }
 
+main{
+    width: 100%;
+    background-image: url("../src/img/jungle.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-shadow: 0cqmin 1cqmin 1cqmin inset;
+    padding-block: 10cqmin;
+
+    div:first-child{
+        width: 100%;
+        height: 60dvh;
+        min-height: 400px;
+        background-image: url("../src/img/szereplok.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
+        box-shadow: 0cqmin 1cqmin 2cqmin inset, 0cqmin -1cqmin 2cqmin inset;
+        display: flex;
+        align-items: center;
+        border-block: 0.5cqmin solid transparent;
+        border-image: url("../src/img/log_bark.jpg") 10 round;
+        animation-name: fade;
+        animation-timeline: scroll();
+
+        section{
+            width: 50%;
+            color: rgb(255, 255, 255);
+            background-color: rgba(0,0,0, 0.7);
+            padding: 2cqmin 5cqmin;
+            
+            h2{
+                font-size: max(2rem, calc(min(4cqmin, 2cqmax) + 1rem));
+                font-family: "Rock Salt", cursive;
+                position: relative;
+                font-weight: bold;
+
+                &::before{
+                    content: "Kezdetek";
+                    position: absolute;
+                    color: rgb(255, 80, 40);
+                    font-size: max(2rem, calc(min(4cqmin, 2cqmax) + 1rem - 0.25px));
+                    font-weight:normal;
+                }
+                &::after{
+                    content: "Kezdetek";
+                    position: absolute;
+                    left: 0;
+                    top: -2px;
+                    color: rgb(250, 160, 40);
+                    font-size: max(2rem, calc(min(4cqmin, 2cqmax) + 1rem - 0.5px));
+                    font-weight:normal;
+                }
+            }
+            p{
+                font-size: max(1rem, calc(min(2cqmin, 0.5cqmax) + 1rem));
+                font-family: "Work Sans", sans-serif;
+                word-break: keep-all;
+                font-weight: bold;
+                padding-bottom: 1cqmin;
+                padding-right: 3cqmin;
+                &::first-letter{
+                    font-size: 150%;
+                }
+            }
+        }
+        div{
+            width: 50%;
+            height: 100%;
+            display: flex;
+            position: relative;
+            
+
+            img:first-child{
+                position: absolute;
+                left: -10%;
+                top: 0;
+                width: 20%;
+                height: 100%;
+            }
+            img:last-child{
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+
 @keyframes nav-border {
     0%{
         border-inline: solid 0.8cqmin rgb(255,255,255,0.5);
@@ -124,6 +217,11 @@ nav{
     100%{
         border-inline: solid 0.8cqmin rgb(250, 150, 60);
     }
+}
+
+@keyframes fade {
+    0%{opacity: 0; transform: translateY(10em);}
+    100%{opacity: 1; transform: translateY(0);}
 }
 
 @media screen and (width <= 768px) {
