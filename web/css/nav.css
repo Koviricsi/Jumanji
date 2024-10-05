@@ -1,5 +1,5 @@
 nav{
-    height: 15dvh;
+    height: 6dvh;
     min-height: 100px;
     width: 100%;
     background-image: url("../src/img/log_bark\ \(2\).jpg");
@@ -8,6 +8,7 @@ nav{
     justify-content: center;
     align-items: center;
     z-index: 100;
+    position: relative;
     
     div{
         padding: 2cqmin;
@@ -34,6 +35,21 @@ nav{
             max(0.12rem, -0.3cqmin) max(0.12rem, -0.3cqmin) rgb(255, 255, 255);
             text-decoration: none;
             cursor: pointer;
+        }
+    }
+}
+
+@media screen and (width >= 1440px) {
+    nav{
+        height: 10vh;
+    }
+}
+
+@media screen and (width <= 768px) {
+    nav{
+
+        div{
+            display: none;
         }
     }
 }

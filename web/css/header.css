@@ -39,3 +39,30 @@
         object-fit: cover;
     }
 }
+
+
+@media screen and (width <= 1440px) {
+    #kezdokep{
+        height: 60vh;
+    }
+}
+
+@media screen and (width <= 1024px) {
+    #kezdokep{
+        height: 40vh;
+    }
+}
+
+@media screen and (width <= 768px) {
+    #kezdokep{
+        height: 20vh;
+        min-height: 300px;
+
+        section{
+
+            img{
+                height: max(9.5rem, 28cqmin);
+            }
+        }
+    }
+}

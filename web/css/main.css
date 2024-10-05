@@ -46,16 +46,15 @@ main{
     justify-content: space-around;
     box-shadow: 0cqmin 1cqmin 1cqmin inset;
     padding-block: 10cqmin;
+    gap: 5cqmin;
 
     >div{
         width: 100%;
-        margin-block: 4em;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: top;
         box-shadow: 0cqmin 1cqmin 2cqmin inset, 0cqmin -1cqmin 2cqmin inset;
         display: flex;
-        flex-wrap: wrap;
         align-items: center;
         border-block: 0.5cqw solid transparent;
         border-image: url("../src/img/log_bark.jpg") 10 round;
@@ -111,6 +110,10 @@ main{
                 &::first-letter{
                     font-size: 150%;
                 }
+                a{
+                    color: rgb(250, 160, 40);
+                    text-decoration: none;
+                }
             }
         }
         >div{
@@ -132,6 +135,7 @@ main{
             }
         }
     }
+
     >div:nth-child(1){
         background-image: url("../src/img/szereplok.jpg");
         height: 600px;
@@ -163,6 +167,7 @@ main{
             }
         }
     }
+
     >div:nth-child(2){
         background-image: url("../src/img/kaland_hatter.jpg");
         height: 700px;
@@ -196,6 +201,7 @@ main{
             }
         }
     }
+
     >div:nth-child(3){
         background-image: url("../src/img/humor_hatter.webp");
         height: 800px;
@@ -217,11 +223,6 @@ main{
                 animation-timeline: view();
                 animation-range-start: 0;
                 animation-range-end: 35%;
-
-                a{
-                    color: rgb(250, 160, 40);
-                    text-decoration: none;
-                }
             }
         }
         div{
@@ -229,6 +230,41 @@ main{
 
             >img{
                 object-position: 10% 10%;
+            }
+        }
+    }
+
+    >div:nth-child(4){
+        flex-direction: column;
+
+        section{
+            width: 100%;
+
+            h2{
+                text-align: center;
+
+                &::before{
+                    content: "Nem volt elég?";
+                }
+                &::after{
+                    content: "Nem volt elég?";
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+            p{
+                padding: 4cqmin;
+                text-align: justify;
+            }
+        }
+        div{
+            width: 100%;
+            border-inline: none;
+            border-top: 1cqmin solid transparent;
+            border-image: url("../src/img/log_bark.jpg") 10 round;
+
+            video{
+                width: 100%;
             }
         }
     }
@@ -270,7 +306,50 @@ main{
 }
 
 @media screen and (width <= 768px) {
-    body{
-        display: none;
+    .vid{
+        scale: 0.7;
+        margin: 0;
+    }
+    main{
+        gap: 10vh;
+
+        >div:is(:nth-child(1),:nth-child(2),:nth-child(3),:nth-child(4)){
+            height: fit-content;
+            flex-direction: column;
+            border-block: none;
+            border-inline: 0.5cqw solid transparent;
+            border-image: url("../src/img/log_bark.jpg") 10 round;
+
+            section{
+                width: 100%;
+            }
+            div{
+                width: 100%;
+                height: 100%;
+                border-inline: none;
+                border-block: 0.5cqw solid transparent;
+                border-image: url("../src/img/log_bark.jpg") 10 round;
+            }
+        }
+        >div:nth-child(odd){
+            border-top: 0.5cqw solid transparent;
+        }
+        >div:nth-child(even){
+            border-bottom: 0.5cqw solid transparent;
+        }
+        >div:nth-child(2){
+            section{
+                h2{
+                    white-space: wrap;
+                }
+            }
+        }
+        >div:nth-child(4){
+            border-top: 0.5cqw solid transparent;
+            div{
+                border-block: none;
+                border-top: 0.5cqw solid transparent;
+            }
+        }
     }
 }
