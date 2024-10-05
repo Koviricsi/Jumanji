@@ -61,7 +61,7 @@
         section{
 
             img{
-                height: max(9.5rem, 28cqmin);
+                height: max(9rem, 28cqmin);
             }
         }
     }
