@@ -2,9 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-:root{
+    scroll-behavior: smooth;
 }
 
 html,body{
@@ -16,33 +14,33 @@ html,body{
     position: absolute;
     top: 0;
     right: 0;
-    margin: max(20px, 2cqmin);
-    padding: max(5px, 1cqmin) max(10px, 2cqmin);
-    background-color: rgba(0,0,0, 0.6);
-    border: solid max(2px, 0.8cqmin) rgb(0,0,0);
-    border-radius: 50px;
+    margin: max(0.8rem, 2cqmin);
+    padding: max(0.4rem, 1cqmin) max(0.8rem, 2cqmin);
+    background-color: rgba(30, 10, 0, 0.6);
+    border: solid max(0.32rem, 0.8cqmin) rgb(20,5,0);
+    border-radius: 3cqmin;
     transition: all 0.2s;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     color: rgb(255, 255, 255);
-    font-size: max(0.8rem, 2.5cqmin);
+    font-size: max(0.8rem, calc(min(1.8cqmin, 0.5cqmax) + 1rem));
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    z-index: 100;
 
     &:hover{
-        background-color: rgba(0,0,0, 1);
+        background-color: rgba(30, 10, 0, 1);
     }
     span{
         margin-left: 0.6cqw;
-        font-size: max(0.8rem, 2.5cqmin);
     }
 }
 
 
 #kezdokep{
     width: 100%;
-    height: 90dvh;
+    height: 85vh;
     min-height: 500px;
     background-image: url(../src/img/jumanji-kezdokep.jpg);
     background-repeat: no-repeat;
@@ -52,11 +50,14 @@ html,body{
     justify-content: center;
     align-items: center;
     font-family: "Bungee Spice", sans-serif;
+    transition: 0.5s all;
+    position: relative;
+    box-shadow: 0cqmin -1cqmin 1cqmin inset;
 
     section{
         width: 100%;
-        height: 30dvh;
-        min-height: 150px;
+        height: 32cqmin;
+        min-height: 12.8rem;
         background-color: rgba(0,0,0, 0.7);
         display: flex;
         justify-content: center;
@@ -64,17 +65,23 @@ html,body{
         flex-direction: column;
 
         h2{
-            font-size: max(1.5rem, 5cqmin);
+            font-size: max(2rem, calc(min(4cqmin, 2cqmax) + 1rem));
             height: 1cqb;
         }
         img{
-            height: max(110px, 28cqmin);
+            height: max(11.2rem, 28cqmin);
         }
+    }
+    video{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 }
 
 nav{
-    height: 12cqmin;
+    height: 15dvh;
     min-height: 100px;
     width: 100%;
     background-image: url(../src/img/log_bark\ \(2\).jpg);
@@ -82,14 +89,15 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 100;
     
     div{
         padding: 2cqmin;
         border-radius: 10%;
-        border-inline: solid 0.8cqmin rgba(255,255,255,0);
+        border-inline: solid max(0.32rem, 0.8cqmin) rgba(255,255,255,0);
         transition: all 0.2s;
 
-        &:is(:hover,:focus,:target, :active){
+        &:is(:hover,:focus,:target,:active){
             border-inline: solid 0.8cqmin rgba(255,255,255,0.5);
             animation-name: nav-border;
             animation-duration: 0.5s;
@@ -99,19 +107,216 @@ nav{
             animation-delay: 0.3s;
         }
         a{
-            /*text-shadow: 0.4cqmin 0.4cqmin rgb(240, 105, 15), 0.8cqmin 0.6cqmin rgb(240, 15, 15);*/
-            font-size: max(1.5rem, 4cqmin);
+            font-size: max(2rem, calc(min(4cqmin, 1.3cqmax) + 1rem));
             font-family: "Bungee Spice", sans-serif;
             text-shadow:
-            -0.3cqmin 0.3cqmin rgb(255, 255, 255),
-            0.3cqmin 0.3cqmin rgb(255, 255, 255),
-            0.3cqmin -0.3cqmin rgb(255, 255, 255),
-            -0.3cqmin -0.3cqmin rgb(255, 255, 255);
+            max(0.12rem, -0.3cqmin) max(0.12rem, 0.3cqmin) rgb(255, 255, 255),
+            max(0.12rem, 0.3cqmin) max(0.12rem, 0.3cqmin) rgb(255, 255, 255),
+            max(0.12rem, 0.3cqmin) max(0.12rem, -0.3cqmin) rgb(255, 255, 255),
+            max(0.12rem, -0.3cqmin) max(0.12rem, -0.3cqmin) rgb(255, 255, 255);
             text-decoration: none;
             cursor: pointer;
         }
     }
 }
+
+main{
+    width: 100%;
+    background-image: url("../src/img/jungle.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-shadow: 0cqmin 1cqmin 1cqmin inset;
+    padding-block: 10cqmin;
+
+    >div{
+        width: 100%;
+        margin-block: 4em;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
+        box-shadow: 0cqmin 1cqmin 2cqmin inset, 0cqmin -1cqmin 2cqmin inset;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        border-block: 0.5cqw solid transparent;
+        border-image: url("../src/img/log_bark.jpg") 10 round;
+        animation-name: fade;
+        animation-timeline: view(); /*scroll()*/
+        animation-range-start: 0;
+        animation-range-end: 50%;
+        position: relative;
+
+        >section{
+            color: rgb(255, 255, 255);
+            background-color: rgba(0,0,0, 0.7);
+            width: 50%;
+            
+            >h2{
+                font-size: max(2rem, calc(min(2cqw, 2cqmax) + 1rem));
+                font-family: "Rock Salt", cursive;
+                position: relative;
+                font-weight: bold;
+                white-space: nowrap;
+                padding-top: 3cqh;
+                animation-name: title;
+                animation-timeline: view();
+                animation-range-start: 0;
+                animation-range-end: 35%;
+
+                &::before{
+                    content: "";
+                    position: absolute;
+                    color: rgb(255, 80, 40);
+                    font-size: max(2rem, calc(min(2cqw, 2cqmax) + 1rem - 0.25px));
+                    font-weight:normal;
+                }
+                &::after{
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: -2px;
+                    color: rgb(250, 160, 40);
+                    padding-top: 3cqh;
+                    font-size: max(2rem, calc(min(2cqw, 2cqmax) + 1rem - 0.75px));
+                    font-weight:normal;
+                }
+            }
+            >p{
+                font-size: max(1rem, calc(0.8cqw + 1rem));
+                font-family: "Work Sans", sans-serif;
+                word-break: keep-all;
+                font-weight: bold;
+                padding-bottom: 3cqh;
+                padding-right: 3cqw;
+
+                &::first-letter{
+                    font-size: 150%;
+                }
+            }
+        }
+        >div{
+            display: flex;
+            position: relative;
+            margin: 0;
+            border-inline: 1cqmin solid transparent;
+            border-image: url("../src/img/log_bark.jpg") 10 round;
+            height: 100%;
+            width: 50%;
+
+            >img{
+                width: 100%;
+                object-fit:cover;
+                animation-name: image;
+                animation-timeline: view();
+                animation-range-start: 0;
+                animation-range-end: 60%;
+            }
+        }
+    }
+    >div:nth-child(1){
+        background-image: url("../src/img/szereplok.jpg");
+        height: 600px;
+
+        section{
+            order: 1;
+            padding-left: 3cqmin;
+
+            h2{
+                &::before{
+                    content: "Kezdetek";
+                }
+                &::after{
+                    content: "Kezdetek";
+                }
+            }
+            p{
+                animation-name: paragraph1;
+                animation-timeline: view();
+                animation-range-start: 0;
+                animation-range-end: 35%;
+            }
+        }
+        div{
+            order: 2;
+
+            >img{
+                object-position: 50% 25%;
+            }
+        }
+    }
+    >div:nth-child(2){
+        background-image: url("../src/img/kaland_hatter.jpg");
+        height: 700px;
+
+        section{
+            order: 2;
+            padding-left: 3cqmin;
+            width: 60%;
+
+            h2{
+                &::before{
+                    content: "Kaland és karakterek";
+                }
+                &::after{
+                    content: "Kaland és karakterek";
+                }
+            }
+            p{
+                animation-name: paragraph2;
+                animation-timeline: view();
+                animation-range-start: 0;
+                animation-range-end: 35%;
+            }
+        }
+        div{
+            order: 1;
+            width: 40%;
+            
+            >img{
+                object-position: 50% 30%;
+            }
+        }
+    }
+    >div:nth-child(3){
+        background-image: url("../src/img/humor_hatter.webp");
+        height: 800px;
+        
+        section{
+            order: 1;
+            padding-left: 3cqmin;
+
+            h2{
+                &::before{
+                    content: "Üzenet és humor";
+                }
+                &::after{
+                    content: "Üzenet és humor";
+                }
+            }
+            p{
+                animation-name: paragraph1;
+                animation-timeline: view();
+                animation-range-start: 0;
+                animation-range-end: 35%;
+
+                a{
+                    color: rgb(250, 160, 40);
+                    text-decoration: none;
+                }
+            }
+        }
+        div{
+            order: 2;
+
+            >img{
+                object-position: 10% 10%;
+            }
+        }
+    }
+}
+
 
 @keyframes nav-border {
     0%{
@@ -120,6 +325,31 @@ nav{
     100%{
         border-inline: solid 0.8cqmin rgb(250, 150, 60);
     }
+}
+
+@keyframes fade {
+    0%{opacity: 0; transform: translateY(10em);}
+    100%{opacity: 1; transform: translateY(0);}
+}
+
+@keyframes title {
+    0%{transform: translateY(10em);}
+    100%{transform: translateY(0);}
+}
+
+@keyframes paragraph1 {
+    0%{transform: translateX(-10em);}
+    100%{transform: translateX(0);}
+}
+
+@keyframes paragraph2 {
+    0%{transform: translateX(10em);}
+    100%{transform: translateX(0);}
+}
+
+@keyframes image {
+    0%{filter: grayscale(1) saturate(0);}
+    100%{filter: grayscale(0) saturate(1);}
 }
 
 @media screen and (width <= 768px) {
