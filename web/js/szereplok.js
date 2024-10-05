@@ -1,12 +1,15 @@
-let alap = document.getElementById("szereplok");
+let szereplok = document.getElementById("szereplok");
 let temp = document.getElementById("temp");
-let temp2 = document.createElement("template");
-let test = document.getElementById("test");
+let valtozas = false
 
 function Gomb_nyomas(){
-    if (alap.tagName() == "div") {
-        temp2.innerHTML = alap.innerHTML;
-        alap.remove()
-        
-    };
+    if (!valtozas){
+        szereplok.style.display = "none"
+        temp.style.display = "flex"
+        valtozas = true
+    } else {
+        szereplok.style.display = "flex"
+        temp.style.display = "none"
+        valtozas = false
+    }
 };

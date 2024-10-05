@@ -14,7 +14,7 @@
     <title>Szereplők</title>
 </head>
 
-<body id="test">
+<body>
     <div id="kezdokep">
         <section id="focim">
             <h2>Szereplők</h2>
@@ -36,7 +36,7 @@
 
 
 
-    <div id="szereplok">
+    <div id="szereplok" style="display: flex;">
         <section>
             <div style="order: 1;">
                 <h1>Spencer Gilpin</h1>
@@ -108,10 +108,10 @@
                 <img src="../src/img/Alex.png" alt="Alex" title="Alex">
             </div>
         </section>
-        <button onclick="Gomb_nyomas();">IRÁNY A JUNGLE</button>
+        <button onclick="Gomb_nyomas(); location.href='#kezdokep'">IRÁNY A JUNGLE</button>
     </div>
     
-    <template id="temp">
+    <div id="temp" style="display: none;">
             <section>
                 <div style="order: 1;">
                     <h1>Dr. Smolder Bravestone</h1>
@@ -166,8 +166,8 @@
                     <img src="../src/img/Bőrdzseki.png" alt='"Jefferson "Seaplane" McDonough"' title='"AJefferson "Seaplane" McDonoughlex"'>
                 </div>
             </section>
-            <button id="rechange-button">IRÁNY A JUNGLE</button>
-    </template>
+            <button onclick="Gomb_nyomas(); location.href='#kezdokep'">Kilépés a játékból</button>
+    </div>
     <script src="../js/szereplok.js"></script>
 </body>
 
