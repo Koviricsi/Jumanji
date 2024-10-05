@@ -1,0 +1,39 @@
+nav{
+    height: 15dvh;
+    min-height: 100px;
+    width: 100%;
+    background-image: url("../src/img/log_bark\ \(2\).jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    
+    div{
+        padding: 2cqmin;
+        border-radius: 10%;
+        border-inline: solid max(0.32rem, 0.8cqmin) rgba(255,255,255,0);
+        transition: all 0.2s;
+
+        &:is(:hover,:focus,:target,:active){
+            border-inline: solid 0.8cqmin rgba(255,255,255,0.5);
+            animation-name: nav-border;
+            animation-duration: 0.5s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-delay: 0.3s;
+        }
+        a{
+            font-size: max(2rem, calc(min(4cqmin, 1.3cqmax) + 1rem));
+            font-family: "Bungee Spice", sans-serif;
+            text-shadow:
+            max(0.12rem, -0.3cqmin) max(0.12rem, 0.3cqmin) rgb(255, 255, 255),
+            max(0.12rem, 0.3cqmin) max(0.12rem, 0.3cqmin) rgb(255, 255, 255),
+            max(0.12rem, 0.3cqmin) max(0.12rem, -0.3cqmin) rgb(255, 255, 255),
+            max(0.12rem, -0.3cqmin) max(0.12rem, -0.3cqmin) rgb(255, 255, 255);
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+}
