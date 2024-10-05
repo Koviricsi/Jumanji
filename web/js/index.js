@@ -1,21 +1,19 @@
 let isAnimating = false;
-
+let elozetes = document.getElementById("elozetes");
 
 function videoButtonChange(){
-
-    let elozetes = document.getElementById("elozetes");
 
     if (elozetes.classList.contains("back-hide")){
         elozetes.textContent = "Vissza";
         let icon = document.createElement("span");
         icon.classList.add("material-symbols-outlined");
-        icon.innerText = "undo"
+        icon.innerText = "undo";
         elozetes.appendChild(icon);
     } else {
         elozetes.textContent = "Előzetes";
         let icon = document.createElement("span");
         icon.classList.add("material-symbols-outlined");
-        icon.innerText = "movie"
+        icon.innerText = "movie";
         elozetes.appendChild(icon);
     };
 
@@ -71,4 +69,41 @@ function Fade(section, vplayer, direction, callback){
     }, 1);
 
     return;
+};
+
+
+let navIsOpen = false;
+let navDivs = document.querySelectorAll("nav div");
+let button = document.getElementById("navbutton");
+
+function navButton(){
+    if (!navIsOpen){
+        navOpen();
+    } else {
+        navClose();
+    }
+};
+
+function navOpen(){
+    button.setAttribute("src","../src/img/menu_open.png");
+    navDivs.forEach((element) => {
+        element.style.transform = "translateX(0)";
+    });
+    navIsOpen = true;
+};
+
+function navClose(){
+    button.setAttribute("src","../src/img/menu.png")
+    navDivs[0].style.transform = "translateX(-200vw)";
+    navDivs[1].style.transform = "translateX(-300vw)";
+    navDivs[2].style.transform = "translateX(-400vw)";
+    navIsOpen = false;
+};
+
+window.onresize = () => {
+    if (window.innerWidth > 768){
+        navOpen();
+    } else {
+        navClose();
+    };
 };

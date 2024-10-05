@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/nav.css">
     <link rel="stylesheet" href="../css/header.css">
-    <script src="../js/index.js"></script>
     <title>Jumanji: Filmajánló</title>
 </head>
 <body>
@@ -22,7 +21,7 @@
     </span>
 
     <div id="kezdokep">
-        <video id="vplayer" src="../src/video/jumanji1.mp4" controls preload="auto" muted style="opacity: 0;" onload="this.pause()"></video>
+        <video id="vplayer" src="../src/video/jumanji1.mp4" poster="../src/img/jumanji_logo_welcome_to_the_jungle.png" controls preload="auto" muted style="opacity: 0;" onload="this.pause()"></video>
         <section id="focim" style="opacity: 1;">
             <h2>Filmajánló</h2>
             <img src="../src/img/jumanji_logo.png">
@@ -39,6 +38,7 @@
         <div>
             <a href="../html/eredmeny.html">Eredmények</a>
         </div>
+        <img src="../src/img/menu.png" onclick="navButton(this);" id="navbutton">
     </nav>
 
     <main>
@@ -82,5 +82,7 @@
             </div>
         </div>
     </main>
+    
+    <script src="../js/index.js"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 nav{
-    height: 6dvh;
+    height: 15vh;
     min-height: 100px;
     width: 100%;
     background-image: url("../src/img/log_bark\ \(2\).jpg");
@@ -36,20 +36,65 @@ nav{
             text-decoration: none;
             cursor: pointer;
         }
+
+        
+    }
+
+    img{
+        display: none;
     }
 }
 
 @media screen and (width >= 1440px) {
     nav{
-        height: 10vh;
+        height: 12vh;
     }
 }
 
 @media screen and (width <= 768px) {
     nav{
+        height: 10vh;
+        min-height: 50px;
+        box-shadow: 0cqmin -1cqmin 1cqmin inset;
+        transition: all 1s;
 
         div{
-            display: none;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 0;
+            border-inline: none;
+            background-image: url("../src/img/log_bark\ \(2\).jpg");
+            background-size: cover;
+            box-shadow: 0cqmin -1cqmin 1cqmin inset;
+            padding: 0;
+
+            a{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        div:nth-child(1){
+            bottom: -100%;
+            transform: translateX(-200vw);
+        }
+        div:nth-child(2){
+            bottom: -200%;
+            transform: translateX(-300vw);
+        }
+        div:nth-child(3){
+            bottom: -300%;
+            transform: translateX(-400vw);
+        }
+        img{
+            position: absolute;
+            display: block;
+            height: 90%;
+            left: 0;
+            cursor: pointer;
         }
     }
 }
