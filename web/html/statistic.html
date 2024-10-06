@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Jersey+25&family=Rock+Salt&family=Work+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="icon" href="../src/img/jumanji_logo.ico">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Jumanji: Statisztika</title>
+</head>
+<body>
+    <div id="kezdokep" style="margin: 0;">
+        <video id="vplayer" src="../src/video/jumanji1.mp4" controls preload="auto" muted style="opacity: 0;" onload="this.pause()"></video>
+        <section id="focim" style="opacity: 1;">
+            <h2 id="focim">Statisztika</h2>
+            <img src="../src/img/jumanji_logo.png">
+        </section>
+    </div>
+
+    <nav>
+        <div>
+            <a href="../html/index.html">Főoldal</a>
+        </div>
+        <div>
+            <a href="../html/szereplok.html">Szereplők</a>
+        </div>
+        <div>
+            <a href="../html/eredmeny.html">Eredmények</a>
+        </div>
+    </nav>
+
+    
+    <!-- Statisztika -->
+    <section class="statistics">
+        <h1 class="heading">Film Bevételek</h1>
+        <h3 class="title"> <span style="background-color: rgba(0, 0, 0, 0.5);">A Jumanji filmek több száz millió dolláros bevételeikkel világszerte hatalmas kasszasikereket értek el.</span></h3>
+        <div class="row">
+            <div class="content">
+                <h3 >Érdemes elolvasni ezt is.</h3>
+                <div class="back">
+                    <p style="margin-top: 50px; margin-bottom: 25px;" >A Jumanji franchise óriási sikert aratott világszerte, hiszen mind a 2017-es Jumanji: Welcome to the Jungle, mind a 2019-es Jumanji: The Next Level hatalmas bevételeket hozott. A kalandos, humoros és látványos filmek több száz millió dolláros box office eredményeket értek el, új szintre emelve a modern akciófilmek világát.</p>
+                </div>
+                
+                <a href="https://www.the-numbers.com/movies/franchise/Jumanji#tab=summary" target="_blank"><button>Több</button></a>
+            </div>
+
+            <div class="chart">
+                <canvas id="lineChart"></canvas>
+            </div>
+        </div>
+    </section>
+    
+    
+    <!-- Pénz -->
+    <section class="main-roles">
+        <h1 class="heading">Színész Bevételek</h1>
+        <h3 class="title"><span style="background-color: rgba(0, 0, 0, 0.5);">A film sztárjai, mint Dwayne Johnson és Kevin Hart, jelentős összegeket kerestek a Jumanji filmekben nyújtott alakításaikkal.</span></h3>
+
+        <div class="car-container">
+            <div class="card">
+                <img src="images/dwayne_johnson.jpg" alt="">
+                <h3>Dwayne Johnson</h3>
+
+                <p>Összes Bevételek: <br>$40 millió</p>
+            </div>
+            <div class="card">
+                <img src="images/kevin_hart.webp" alt="">
+                <h3>Kevin Hart</h3>
+
+                <p>Összes Bevételek: <br>$35 millió</p>
+            </div>
+            <div class="card">
+                <img src="images/jack_black.jpg" alt="">
+                <h3>Jack Black</h3>
+
+                <p>Összes Bevételek: <br>$17 millió</p>
+            </div>
+            <div class="card">
+                <img src="images/karen_gillan.jpg" alt="">
+                <h3>Karen Gillan</h3>
+
+                <p>Összes Bevételek: <br>$6 millió</p>
+            </div>
+        </div>
+    </section>
+
+    <!--Eredmények-->
+    <!--IDEA: Blur alapból rájuk-->
+    <section class="accolades">
+        <h1 class="heading">Elsimerések <br> Eredmények</h1>
+        <h3 class="title"><span style="background-color: rgba(0, 0, 0, 0.5);">A Jumanji filmeket számos díjra jelölték, és több díjat is nyertek a közönség és kritikusok körében.<span></h3>
+
+        <div class="box-container">
+            <div class="box" style="transform: translateY(-3rem);">
+                <img src="images/People's Choice Award Logo.png" alt="">
+                <h3>People's Choice Awards</h3>
+                <p>Többszörös győzelmet aratott a Jumanji: Vár a dzsungel és a Jumanji: A következő szint, különösen Dwayne Johnson és a filmek a saját kategóriáik kedvenceiként.</p>
+            </div>
+            <div class="box" style="transform: translateY(-2rem);">
+                <img src="images/Saturn Awards.png" alt="" >
+                <h3>Saturn Awards</h3>
+                <p>Bár egyik Jumanji film sem nyert a főbb kategóriákban, a franchise számos jelölést kapott, különösen a vizuális effektek és az alakítások terén.</p>
+            </div>
+            <div class="box" style="transform: translateY(-1rem);">
+                <img src="images/Teen_Choice_Awards.png" alt="">
+                <h3>Teen Choice Awards</h3>
+                <p>Mindkét Jumanji film díjazásra került a vígjáték és akció kategóriákban.</p>
+            </div>
+        </div>
+
+
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="chart3.js"></script>
+
+</body>
+</html>
