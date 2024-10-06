@@ -17,12 +17,13 @@ body {
     --white-back: rgba(255, 255, 255, 0.7);
 }
 
-#szereplok, #temp {
+#szereplok,
+#temp {
     flex-direction: column;
     align-items: center;
     gap: 3cqmin;
 
-    background-image: url("../src/img/background_szereplok.jpg");
+    background-image: url("../src/img/background_szereplok-blur.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -76,4 +77,36 @@ body {
     }
 }
 
-@media screen and (width <=768px) {}
+@media screen and (width <=768px) {
+
+    #szereplok,
+    #temp {
+        section {
+            flex-direction: column;
+            align-items: center;
+            min-height: 75cqmin;
+            
+            width: 90%;
+            border-radius: 7.5px;
+
+            div:nth-child(1){
+                width: 100%;
+                padding: 10px;
+
+                h1{
+                    font-size: 40px;
+                }
+                h2{
+                    font-size: 20px;
+                }
+                p{
+                    font-size: 20px;
+                }
+
+            }
+            img {
+                max-height: 300px;
+            }
+        }
+    }
+}
