@@ -29,6 +29,10 @@ h3, p {
     padding: 0 1rem;
     padding-top: 6rem;
     letter-spacing: .2rem;
+    animation-name: fade;
+    animation-timeline: view();
+    animation-range-start: 0;
+    animation-range-end: 35%;
 }
 
 .title {
@@ -41,11 +45,14 @@ h3, p {
     color: white;
     font-weight: bold;
 
-
+    animation-name: fade;
+    animation-timeline: view();
+    animation-range-start: 0;
+    animation-range-end: 35%;
 }
 
 .statistics {
-    background-image: url(../html/images/bg/jumanji_the_next_level_4k_5k_1_hd_movies.jpg);
+    background-image: url(../src/img/jumanji_the_next_level_4k_5k_1_hd_movies.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -94,6 +101,11 @@ h3, p {
     
     color: rgb(255, 255, 255);
     padding: 1rem 0;
+
+    animation-name: fade;
+    animation-timeline: view();
+    animation-range-start: 0;
+    animation-range-end: 35%;
 }
 
 .statistics .row .content button {
@@ -120,7 +132,7 @@ h3, p {
 
 .main-roles {
     
-    background-image: url(../html/images/bg/jumanji-the-next-level-2019_1563220783.jpg);
+    background-image: url(../src/img/jumanji-the-next-level-2019_1563220783.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -180,7 +192,7 @@ h3, p {
 /* Eredmények */
 
 .accolades {
-    background-image: url(../html/images/bg/jumanji_the_next_level_4k_5k_3_hd_movies.jpg);
+    background-image: url(../src/img/jumanji_the_next_level_4k_5k_3_hd_movies.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -228,6 +240,12 @@ h3, p {
 
 }
 
+@keyframes fade {
+    0%{opacity: 0; transform: translateY(10em);}
+    100%{opacity: 1; transform: translateY(0);}
+}
+
+
 
 /* Reszponzitivitás */
 
@@ -252,6 +270,9 @@ h3, p {
         height: 100px;
         width: 500px;
         margin-right: 0;
+    }
+    .heading{
+        font-size: 3rem;
     }
 }
 
