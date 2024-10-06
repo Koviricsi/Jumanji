@@ -31,7 +31,7 @@ body {
     section {
         display: flex;
         flex-direction: row;
-        width: 100cqmin;
+        width: 100%;
         height: 25cqmin;
         border: var(--black) 2px solid;
         background-color: var(--back-black);
@@ -76,4 +76,40 @@ body {
     }
 }
 
-@media screen and (width <=768px) {}
+@media screen and (width <= 768px) {
+    #szereplok, #temp{
+        section{
+            flex-direction: column;
+            height: auto;
+            border-radius: 10px;
+
+            div:nth-child(1){
+                width: 100%;
+                padding: 2cqmin;
+
+                h1{
+                    font-size: 6cqmin;
+                }
+                h2{
+                    font-size: 4cqmin;
+                }
+                p{
+                    font-size: 4cqmin;
+                    text-align: justify;
+                }
+            }
+            div:nth-child(2){
+
+                img{
+                    width: 100%;
+                }
+            }
+        }
+        button{
+            font-size: 4cqmin;
+            width: fit-content;
+            height: fit-content;
+            padding: 2cqmin;
+        }
+    }
+}
