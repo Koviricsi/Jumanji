@@ -31,14 +31,13 @@ body {
     section {
         display: flex;
         flex-direction: row;
-        width: 100%;
-        height: 25cqmin;
+        width: 75%;
         border: var(--black) 2px solid;
         background-color: var(--back-black);
         color: var(--white);
 
         div:nth-child(1) {
-            width: 65cqmin;
+            width: fit-content;
             padding: 1cqmin;
             flex-grow: 1;
 
@@ -53,15 +52,18 @@ body {
             }
 
             p {
-                font-size: 2cqmin;
+                font-size: 2.5cqmin;
             }
         }
 
         div:nth-child(2) {
             text-align: right;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
             img {
-                height: 100%;
+                width: 100%;
             }
         }
     }
@@ -76,7 +78,7 @@ body {
     }
 }
 
-@media screen and (width <= 768px) {
+@media screen and (width <= 1024px) {
     #szereplok, #temp{
         section{
             flex-direction: column;
